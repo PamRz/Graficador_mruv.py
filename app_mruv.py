@@ -9,7 +9,7 @@ def plot_position(X0, V0, a, t_max, times):
     t = np.linspace(0, t_max, 500)
     X = calculate_position(X0, V0, a, t)
     
-    fig, ax = plt.subplots(figsize=(14, 7))  # Hacer el gráfico más amplio
+    fig, ax = plt.subplots(figsize=(8, 8))  # Hacer el gráfico cuadrado
     ax.plot(t, X, label=f'X(t) = {X0} + {V0}t + 0.5*{a}t²')
     
     # Marcar los puntos específicos en el gráfico
@@ -19,11 +19,11 @@ def plot_position(X0, V0, a, t_max, times):
         ax.text(time, X_time, f'({time},{X_time:.2f})', fontsize=9, ha='right')
 
     # Configuración de los ejes para que sean proporcionales y espaciados de 0.5 en 0.5
-    ax.set_aspect('auto', adjustable='box')  # Cambiado de 'equal' a 'auto'
+    ax.set_aspect('equal', adjustable='box')
     ax.set_xlim(0, t_max)
     ax.set_xticks(np.arange(0, t_max + 0.5, 0.5))
-    ax.set_ylim(min(X), max(X))
-    ax.set_yticks(np.arange(min(X), max(X) + 0.5, 0.5))
+    ax.set_ylim(0, max(X))  # Asegurarse de que el eje y comience en 0
+    ax.set_yticks(np.arange(0, max(X) + 0.5, 0.5))
     
     ax.set_xlabel('Tiempo (t)')
     ax.set_ylabel('Posición (X)')
@@ -51,4 +51,6 @@ def main():
 if __name__ == "__main__":
     main()
 
+    
+   
 
