@@ -19,8 +19,10 @@ def plot_position(X0, V0, a, t_max, times):
         ax.text(time, X_time, f'({time},{X_time:.2f})', fontsize=9, ha='right')
 
     # Configuración de los ejes para que sean proporcionales y espaciados de 0.5 en 0.5
-    ax.set_aspect('equal', adjustable='box')
+    ax.set_aspect('auto', adjustable='box')  # Cambiado de 'equal' a 'auto'
+    ax.set_xlim(0, t_max)
     ax.set_xticks(np.arange(0, t_max + 0.5, 0.5))
+    ax.set_ylim(min(X), max(X))
     ax.set_yticks(np.arange(min(X), max(X) + 0.5, 0.5))
     
     ax.set_xlabel('Tiempo (t)')
@@ -48,4 +50,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+  
 
