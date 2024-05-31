@@ -60,7 +60,7 @@ def main():
 
     # Información sobre la creadora y enlace a Instagram
     st.markdown("---")
-    st.markdown("Creado por **Prof. Pamela Ramírez. Diplomada Universitaria Superior en Enseñanza de la Física  **")
+    st.markdown("Creado por la Prof. Pamela Ramírez. Diplomada Universitaria Superior en Enseñanza de la Física ")
     st.markdown("Sigue mi cuenta de Instagram para más contenido de ciencia: [@ciencia_atr](https://www.instagram.com/ciencia_atr)")
 
 # Verificar si el script se ejecuta directamente
