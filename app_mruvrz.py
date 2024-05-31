@@ -42,7 +42,7 @@ def plot_position(X0, V0, a, t_max, times):
 
 # Función principal donde se ejecuta todo el programa
 def main():
-    st.title('Simulación de Movimiento Rectilíneo Uniformemente Variado (MRUV)')
+    st.title('Graficador de Movimiento Rectilíneo Uniformemente Variado (MRUV)')
 
     # Entrada de datos desde el usuario
     X0 = st.number_input('Ingrese la posición inicial (X0):', value=0.0, step=None)
@@ -57,6 +57,14 @@ def main():
     times = [t1, t2, t3, t4]  # Lista de tiempos específicos
     plot_position(X0, V0, a, t_max, times)  # Llamar a la función para graficar la posición
 
+    # Información sobre la creadora y enlace a Instagram
+    st.markdown("---")
+    st.markdown("Creado por **Prof. Pamela Ramírez**")
+    st.markdown("Sigue mi cuenta de Instagram para más contenido de ciencia: [@ciencia_atr](https://www.instagram.com/ciencia_atr)")
+
 # Verificar si el script se ejecuta directamente
 if __name__ == "__main__":
     main()
+
+        
+
